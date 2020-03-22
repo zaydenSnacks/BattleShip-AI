@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45db2c9b-5c6d-47b4-b870-8b832b9122ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComputerPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExpertComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExpertComputerPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +43,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Zayden Chin\OneDrive - Cobb County School District\AP Comp SCI\BattleShip\src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\1135591\OneDrive - Cobb County School District\AP Comp SCI\BattleShip\src" />
       <recent name="C:\Users\1135591\OneDrive - Cobb County School District\AP Comp SCI\BattleShip" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Zayden Chin\OneDrive - Cobb County School District\AP Comp SCI\BattleShip\src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.BattleshipDriver">
@@ -103,21 +103,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584777104081" />
-    <state x="512" y="114" key="CommitChangelistDialog2" timestamp="1584777206567">
+    <state x="756" y="405" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584902569925">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="512" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584777206567" />
+    <state x="756" y="405" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1584902569925" />
+    <state x="512" y="114" key="CommitChangelistDialog2" timestamp="1584778193998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="512" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584778193998" />
     <state x="620" y="242" key="RollbackChangesDialog" timestamp="1584777224689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="620" y="242" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584777224689" />
-    <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584777681536">
+    <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584902167180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584777681536" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584778175283">
+    <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584902167180" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584904775857">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584778175283" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584904775857" />
   </component>
 </project>

@@ -25,11 +25,11 @@ public class ComputerPlayer extends Player
      *   false otherwise.
      *
      * @param enemy The Player to attack.
-     * @param locx The Location to attack.
+     * @param loc The Location to attack.
      * @return
      */
     @Override
-    public boolean attack(Player enemy, Location locx)
+    public boolean attack(Player enemy, Location loc)
     {
         int x = 0;
         int y = 0;
@@ -40,16 +40,16 @@ public class ComputerPlayer extends Player
              y = (int) (Math.random() * 10);
         }
 
-        Location loc = new Location(x, y);          // creates new location object with randomized row and col
+        Location locx = new Location(x, y);          // creates new location object with randomized row and col
 
-        if(enemy.hasShipAtLocation(loc))
+        if(enemy.hasShipAtLocation(locx))
         {
             getGuessBoard()[x][y] = 1;
-            enemy.getShip(loc).takeHit(loc);
+            enemy.getShip(locx).takeHit(locx);
 
-            if(enemy.getShip(loc).isSunk())             // determines if the ship sunk due to the recent attack
+            if(enemy.getShip(locx).isSunk())             // determines if the ship sunk due to the recent attack
             {
-                enemy.removeShip(enemy.getShip(loc));
+                enemy.removeShip(enemy.getShip(locx));
                 return true;
             }
 

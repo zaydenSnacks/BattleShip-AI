@@ -6,9 +6,9 @@ public class ExpertComputerPlayer extends ComputerPlayer
     }
 
     @Override
-    public boolean attack(Player enemy, Location locx)
+    public boolean attack(Player enemy, Location loc )
     {
-        return super.attack(enemy, locx);
+        return super.attack(enemy, loc);
     }
 
     @Override
