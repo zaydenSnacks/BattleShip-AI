@@ -3,6 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="45db2c9b-5c6d-47b4-b870-8b832b9122ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/AircraftCarrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/AircraftCarrier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/Battleship.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/Battleship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/BattleshipDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/BattleshipDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/ComputerPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/ComputerPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/Cruiser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/Cruiser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/Destroyer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/Destroyer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/HumanPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/HumanPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/Location.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/META-INF/BattleShip.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/PatrolBoat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/PatrolBoat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/Ship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/Submarine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/Submarine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/VsDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/VsDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/Window.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComputerPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ExpertComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExpertComputerPlayer.java" afterDir="false" />
     </list>
@@ -40,7 +55,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583514595896" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bug" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -88,6 +104,14 @@
       <option name="presentableId" value="Default" />
       <updated>1583169153836</updated>
     </task>
+    <task id="LOCAL-00001" summary="look at this">
+      <created>1584904794901</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584904794901</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -107,21 +131,53 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="405" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1584902569925" />
-    <state x="512" y="114" key="CommitChangelistDialog2" timestamp="1584778193998">
+    <state x="512" y="114" key="CommitChangelistDialog2" timestamp="1584904794375">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="512" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584778193998" />
+    <state x="512" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584904794375" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1584907310358">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584907310358" />
+    <state x="830" y="413" key="Github.ShareDialog" timestamp="1585081844753">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="830" y="413" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585081844753" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1585004880819">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585004880819" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1585004880818">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585004880818" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1585004880818">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585004880818" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1585004880819">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585004880819" />
     <state x="620" y="242" key="RollbackChangesDialog" timestamp="1584777224689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="620" y="242" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584777224689" />
-    <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584902167180">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1584906411787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584902167180" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584904775857">
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584906411787" />
+    <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585097413104">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584904775857" />
+    <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585097413104" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585098019615">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585098019615" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585001371614">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585001371614" />
   </component>
 </project>
