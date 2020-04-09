@@ -2,10 +2,12 @@ import java.util.ArrayList;
 
 public class ExpertComputerPlayer extends ComputerPlayer
 {
-    private static boolean hit = false;
-    private static boolean reTry = false;
-    private static Location hiit;
-    private static int x;
+    ArrayList<Location> positions = new ArrayList<>();
+    private boolean bool;
+    private Location original;
+    private int row;
+    private int col;
+    private int hitPlace = 0;
 
     public ExpertComputerPlayer(String name)
     {
@@ -15,40 +17,29 @@ public class ExpertComputerPlayer extends ComputerPlayer
     @Override
     public boolean attack(Player enemy, Location loc )
     {
-        if(hit)
-            return vertical(enemy);
-        if(reTry)
-            return horizontal();
+        positions.clear();
+        checkerBoard();
+        bool = fullCBoard();
 
-        ArrayList<Location> positions = new ArrayList<>();
 
-        for (int i = 0; i < getGuessBoard().length; i++)
-            for (int j = 0; j < getGuessBoard().length; j++)
-                if(j % 2 == 0 && i % 2 == 0)
-                    positions.add(new Location(i, j));
-                else if(j % 2 == 1 && i % 2 == 1)
-                    positions.add(new Location(i,j));
+        if(!original.isHit())           // figure this out (error from not initializing)
+            randomPos();
+        else
+            vertical();
 
-        int random = 0;
 
-        while(getGuessBoard()[positions.get(random).getRow()] [positions.get(random).getCol()] != 0)
-        {
-            random = (int) (Math.random() * 50);
-        }
 
-        int row = positions.get(random).getRow();
-        int col = positions.get(random).getCol();
+        row = positions.get(hitPlace).getRow();
+        col = positions.get(hitPlace).getCol();
 
         Location locx = new Location(row, col);
         if(enemy.hasShipAtLocation(locx))
         {
             getGuessBoard()[row][col] = 1;
             enemy.getShip(locx).takeHit(locx);
-            hit = true;
-            Location hiit = locx;
-            x = 1;
+            original = new Location(locx.getRow(), locx.getCol(), true);
 
-            if(enemy.getShip(locx).isSunk())             // determines if the ship sunk due to the recent attack
+            if(enemy.getShip(locx).isSunk())
             {
                 enemy.removeShip(enemy.getShip(locx));
                 return true;
@@ -58,48 +49,57 @@ public class ExpertComputerPlayer extends ComputerPlayer
         else
             getGuessBoard()[row][col] = -1;
 
+
         return false;
     }
 
-    private static boolean horizontal()
+    private void vertical()
     {
-        return false;
+
     }
 
-    private boolean vertical(Player enemy)
+    private void randomPos()
     {
-        Location loc = new Location(hiit.getRow(), hiit.getCol() + x);
-        int row = loc.getRow();
-        int col = loc.getCol();
+        int x = 50;
+        if(bool)
+            x = 100;
 
-        if(enemy.hasShipAtLocation(loc))
+        while(getGuessBoard()[positions.get(hitPlace).getRow()] [positions.get(hitPlace).getCol()] != 0)
         {
-            getGuessBoard()[row][col] = 1;
-            enemy.getShip(loc).takeHit(loc);
-            hit = true;
-            Location hiit = loc;
+            hitPlace = (int) (Math.random() * x);
+        }
+    }
 
-            if(enemy.getShip(loc).isSunk())             // determines if the ship sunk due to the recent attack
+    private boolean fullCBoard()
+    {
+        for (int i = 0; i < positions.size(); i++)
+        {
+            if(getGuessBoard()[positions.get(i).getRow()] [positions.get(i).getCol()] == 0)
+                break;
+            else if(i == positions.size() - 1)
             {
-                hit = false;
-                enemy.removeShip(enemy.getShip(loc));
+                positions.clear();
+                for (int j = 0; j < getGuessBoard().length; j++)
+                {
+                    for (int k = 0; k < getGuessBoard().length; k++)
+                    {
+                        positions.add(new Location(j, k));
+                    }
+                }
                 return true;
             }
         }
-        else
-        {
-            getGuessBoard()[row][col] = -1;
-
-            if(x == 1)
-                x = -1;
-            else
-            {
-                hit = false;
-                //reTry = true;
-            }
-        }
-
         return false;
+    }
+
+    private void checkerBoard()
+    {
+        for (int i = 0; i < getGuessBoard().length; i++)
+            for (int j = 0; j < getGuessBoard().length; j++)
+                if(j % 2 == 0 && i % 2 == 0)
+                    positions.add(new Location(i, j));
+                else if(j % 2 == 1 && i % 2 == 1)
+                    positions.add(new Location(i,j));
     }
 
     @Override

@@ -18,7 +18,7 @@ public class BattleshipDriver extends Canvas implements MouseListener
     {
         battleship = new Battleship();
         battleship.addPlayer(new HumanPlayer("Mr. Hubbard"));
-        battleship.addPlayer(new ComputerPlayer("AlphaBattleship"));
+        battleship.addPlayer(new ExpertComputerPlayer("AlphaBattleship"));
 
         x = 90;
         y = 200;
