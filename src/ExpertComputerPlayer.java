@@ -4,10 +4,16 @@ public class ExpertComputerPlayer extends ComputerPlayer
 {
     ArrayList<Location> positions = new ArrayList<>();
     private boolean bool;
-    private Location original;
+    private Location original = new Location(-1, -1);
     private int row;
     private int col;
     private int hitPlace = 0;
+    private Player enemy;
+    private int add = 1;
+    private int countH;
+    private int countV;
+    private boolean methdRun = false;
+
 
     public ExpertComputerPlayer(String name)
     {
@@ -17,15 +23,16 @@ public class ExpertComputerPlayer extends ComputerPlayer
     @Override
     public boolean attack(Player enemy, Location loc )
     {
+        this.enemy = enemy;         // watch this
         positions.clear();
         checkerBoard();
         bool = fullCBoard();
 
 
-        if(!original.isHit())           // figure this out (error from not initializing)
-            randomPos();
+        if(original.isHit())
+            return check();
         else
-            vertical();
+            randomPos();
 
 
 
@@ -38,6 +45,9 @@ public class ExpertComputerPlayer extends ComputerPlayer
             getGuessBoard()[row][col] = 1;
             enemy.getShip(locx).takeHit(locx);
             original = new Location(locx.getRow(), locx.getCol(), true);
+            countV = 0;
+            countH = 0;
+            methdRun = false;
 
             if(enemy.getShip(locx).isSunk())
             {
@@ -53,9 +63,111 @@ public class ExpertComputerPlayer extends ComputerPlayer
         return false;
     }
 
-    private void vertical()
+    private boolean check()
     {
+        if(!methdRun)
+        {
+            row = original.getRow();
+            col = original.getCol();
+        }
 
+        if(countH < 2)
+        {
+            if (col == 0)
+            {
+                add = 1;
+                return horizontal();
+            }
+            else if (col == 10)
+            {
+                add = -1;
+                return horizontal();
+            }
+            else
+                return horizontal();
+        }
+        else
+        {
+            if (row == 0)
+            {
+                add = 1;
+                return vertical();
+            }
+            else if (row == 10)
+            {
+                add = -1;
+                return vertical();
+            }
+            else
+                return vertical();
+        }
+
+    }
+
+    private boolean vertical()
+    {
+        if(countV == 1)
+            add = add * -1;
+
+        row = row + add;
+
+        Location locx = new Location(row, col);
+        if(enemy.hasShipAtLocation(locx))
+        {
+            getGuessBoard()[row][col] = 1;
+            enemy.getShip(locx).takeHit(locx);
+            methdRun = true;
+
+            if(enemy.getShip(locx).isSunk())
+            {
+                original.setHit(false);
+                enemy.removeShip(enemy.getShip(locx));
+                return true;
+            }
+
+        }
+        else
+        {
+            countV++;
+            getGuessBoard()[row][col] = -1;
+            methdRun = false;
+        }
+
+
+        return false;
+    }
+
+    private boolean horizontal()
+    {
+        if(countH == 1)
+            add = add * -1;
+
+        col = col + add;
+
+        Location locx = new Location(row, col);
+        if(enemy.hasShipAtLocation(locx))
+        {
+            getGuessBoard()[row][col] = 1;
+            enemy.getShip(locx).takeHit(locx);
+            methdRun = true;
+
+            if(enemy.getShip(locx).isSunk())
+            {
+                original.setHit(false);
+                enemy.removeShip(enemy.getShip(locx));
+                return true;
+            }
+
+        }
+        else
+        {
+            countH++;
+            getGuessBoard()[row][col] = -1;
+            methdRun = false;
+        }
+
+
+        return false;
     }
 
     private void randomPos()
