@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45db2c9b-5c6d-47b4-b870-8b832b9122ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExpertComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExpertComputerPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Location.java" afterDir="false" />
-    </list>
+    <list default="true" id="45db2c9b-5c6d-47b4-b870-8b832b9122ce" name="Default Changelist" comment="fix out of bounds exception" />
+    <list id="67ea3222-c263-418b-81d9-30f050650fce" name="fix out of bounds exception" comment="" />
+    <list id="e6780b4d-7822-4f47-b8fa-329b255a9e33" name="Revert &quot;fix out of bounds exception&quot;" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1ZQhBw95DVm5gZEOjvDfHvHkcii" />
@@ -160,10 +158,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="252" y="354" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1586191738930" />
-    <state x="512" y="114" key="CommitChangelistDialog2" timestamp="1586451441464">
+    <state x="512" y="114" key="CommitChangelistDialog2" timestamp="1586629756220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="512" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586451441464" />
+    <state x="512" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586629756220" />
     <state x="-7" y="0" width="974" height="1047" key="DiffContextDialog" timestamp="1586454240918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -216,14 +214,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584906411787" />
+    <state x="807" y="436" key="VCS.ChangelistChooser" timestamp="1586629816715">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="807" y="436" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586629816715" />
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586540101650">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586540101650" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586540514601">
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586630064026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586540514601" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586630064026" />
     <state x="685" y="144" key="new project wizard" timestamp="1585182087596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -234,6 +236,6 @@
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585001371614" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/BattleShip$BattleshipDriver.ic" NAME="BattleshipDriver Coverage Results" MODIFIED="1586191609606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/BattleShip$BattleshipDriver.ic" NAME="BattleshipDriver Coverage Results" MODIFIED="1586615280884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

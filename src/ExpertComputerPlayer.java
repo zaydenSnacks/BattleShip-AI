@@ -15,6 +15,7 @@ public class ExpertComputerPlayer extends ComputerPlayer
     private boolean methdRun = false;
 
 
+
     public ExpertComputerPlayer(String name)
     {
         super(name);
@@ -70,7 +71,8 @@ public class ExpertComputerPlayer extends ComputerPlayer
             row = original.getRow();
             col = original.getCol();
         }
-
+        System.out.println("Row and column: " + row + ", " + col);
+        System.out.println("CountV: " + countH);
         if(countH < 2)
         {
             if (col == 0)
@@ -78,7 +80,7 @@ public class ExpertComputerPlayer extends ComputerPlayer
                 add = 1;
                 return horizontal();
             }
-            else if (col == 10)
+            else if (col == 9)
             {
                 add = -1;
                 return horizontal();
@@ -93,7 +95,7 @@ public class ExpertComputerPlayer extends ComputerPlayer
                 add = 1;
                 return vertical();
             }
-            else if (row == 10)
+            else if (row == 9)
             {
                 add = -1;
                 return vertical();
@@ -110,6 +112,8 @@ public class ExpertComputerPlayer extends ComputerPlayer
             add = add * -1;
 
         row = row + add;
+
+        checkV();
 
         Location locx = new Location(row, col);
         if(enemy.hasShipAtLocation(locx))
@@ -144,6 +148,8 @@ public class ExpertComputerPlayer extends ComputerPlayer
 
         col = col + add;
 
+        checkH();
+
         Location locx = new Location(row, col);
         if(enemy.hasShipAtLocation(locx))
         {
@@ -168,6 +174,37 @@ public class ExpertComputerPlayer extends ComputerPlayer
 
 
         return false;
+    }
+
+    private void checkH()
+    {
+        if(getGuessBoard()[row][col] == 1 || getGuessBoard()[row][col] == -1)
+        {
+                col = original.getCol();
+
+                add = add * -1;
+                col = col + add;
+
+                if(getGuessBoard()[row][col] == -1 || getGuessBoard()[row][col] == 1)
+                    vertical();
+
+        }
+    }
+
+    private void checkV()
+    {
+
+        if(getGuessBoard()[row][col] == 1 || getGuessBoard()[row][col] == -1)
+        {
+            row = original.getCol();
+
+            add = add * -1;
+            row = row + add;
+
+            if(getGuessBoard()[row][col] == -1 || getGuessBoard()[row][col] == 1)
+                horizontal();
+
+        }
     }
 
     private void randomPos()
