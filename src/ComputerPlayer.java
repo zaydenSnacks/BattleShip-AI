@@ -76,23 +76,184 @@ public class ComputerPlayer extends Player
     @Override
     public void populateShips()
     {
-        Location[] array1 = {new Location(1, 1), new Location(2, 1),
-                new Location(3, 1), new Location(4, 1),
-                new Location(5, 1)};
-        Location[] array2 = {new Location(1, 2), new Location(2, 2),
-                new Location(3, 2), new Location(4, 2)};
-        Location[] array3 = {new Location(1, 3), new Location(2, 3),
-                new Location(3, 3)};
-        Location[] array4 = {new Location(1, 4), new Location(2, 4),
-                new Location(3, 4)};
-        Location[] array5 = {new Location(1, 5),
-                new Location(2, 5)};
+        outerloop:
+        while(true)
+        {
+            int nonChangingPosition = (int) (Math.random() * 10);           // random position that doesn't change from 0-9
+            int changingPosition = (int) (Math.random() * 6);               // random position that changes from 0-5
 
+            if(Math.random() < 0.50)
+            {
+                for (int i = changingPosition; i < changingPosition + 5; i++)
+                {
+                    if(hasShipAtLocation(new Location(nonChangingPosition, i)))
+                        continue outerloop;
+                }
 
-        addShip(new AircraftCarrier(array1));
-        addShip(new Destroyer(array2));
-        addShip(new Cruiser(array3));
-        addShip(new Submarine(array4));
-        addShip(new PatrolBoat(array5));
+                addShip(new AircraftCarrier(new Location(nonChangingPosition, changingPosition),
+                        new Location(nonChangingPosition, changingPosition + 1),
+                        new Location(nonChangingPosition, changingPosition + 2),
+                        new Location(nonChangingPosition, changingPosition + 3),
+                        new Location(nonChangingPosition, changingPosition + 4)));
+                break;
+            }
+            else
+            {
+                for (int i = changingPosition; i < changingPosition + 5; i++)
+                {
+                    if(hasShipAtLocation(new Location(i, nonChangingPosition)))
+                        continue outerloop;
+                }
+
+                addShip(new AircraftCarrier(new Location(changingPosition, nonChangingPosition),
+                        new Location(changingPosition + 1, nonChangingPosition),
+                        new Location(changingPosition + 2, nonChangingPosition),
+                        new Location(changingPosition + 3, nonChangingPosition),
+                        new Location(changingPosition + 4, nonChangingPosition)));
+                break;
+            }
+        }
+
+        // repeats code before, except with a ship of length 4
+        outerloop:
+        while(true)
+        {
+            int nonChangingPosition = (int) (Math.random() * 10);
+            int changingPosition = (int) (Math.random() * 7);
+
+            if(Math.random() < 0.50)
+            {
+                for (int i = changingPosition; i < changingPosition + 4; i++)
+                {
+                    if(hasShipAtLocation(new Location(nonChangingPosition, i)))
+                        continue outerloop;
+                }
+
+                addShip(new Destroyer(new Location(nonChangingPosition, changingPosition),
+                        new Location(nonChangingPosition, changingPosition + 1),
+                        new Location(nonChangingPosition, changingPosition + 2),
+                        new Location(nonChangingPosition, changingPosition + 3)));
+                break;
+            }
+            else
+            {
+                for (int i = changingPosition; i < changingPosition + 4; i++)
+                {
+                    if(hasShipAtLocation(new Location(i, nonChangingPosition)))
+                        continue outerloop;
+                }
+
+                addShip(new Destroyer(new Location(changingPosition, nonChangingPosition),
+                        new Location(changingPosition + 1, nonChangingPosition),
+                        new Location(changingPosition + 2, nonChangingPosition),
+                        new Location(changingPosition + 3, nonChangingPosition)));
+                break;
+            }
+        }
+
+        // repeats code before, except with a ship of length 3
+        outerloop:
+        while(true)
+        {
+            int nonChangingPosition = (int) (Math.random() * 10);
+            int changingPosition = (int) (Math.random() * 8);
+
+            if(Math.random() < 0.50)
+            {
+                for (int i = changingPosition; i < changingPosition + 3; i++)
+                {
+                    if(hasShipAtLocation(new Location(nonChangingPosition, i)))
+                        continue outerloop;
+                }
+
+                addShip(new Submarine(new Location(nonChangingPosition, changingPosition),
+                        new Location(nonChangingPosition, changingPosition + 1),
+                        new Location(nonChangingPosition, changingPosition + 2)));
+                break;
+            }
+            else
+            {
+                for (int i = changingPosition; i < changingPosition + 3; i++)
+                {
+                    if(hasShipAtLocation(new Location(i, nonChangingPosition)))
+                        continue outerloop;
+                }
+
+                addShip(new Submarine(new Location(changingPosition, nonChangingPosition),
+                        new Location(changingPosition + 1, nonChangingPosition),
+                        new Location(changingPosition + 2, nonChangingPosition)));
+                break;
+            }
+        }
+
+        // repeats code before, except with a ship of length 3
+        outerloop:
+        while(true)
+        {
+            int nonChangingPosition = (int) (Math.random() * 10);
+            int changingPosition = (int) (Math.random() * 8);
+
+            if(Math.random() < 0.50)
+            {
+                for (int i = changingPosition; i < changingPosition + 3; i++)
+                {
+                    if(hasShipAtLocation(new Location(nonChangingPosition, i)))
+                        continue outerloop;
+                }
+
+                addShip(new Cruiser(new Location(nonChangingPosition, changingPosition),
+                        new Location(nonChangingPosition, changingPosition + 1),
+                        new Location(nonChangingPosition, changingPosition + 2)));
+                break;
+            }
+            else
+            {
+                for (int i = changingPosition; i < changingPosition + 3; i++)
+                {
+                    if(hasShipAtLocation(new Location(i, nonChangingPosition)))
+                        continue outerloop;
+                }
+
+                addShip(new Cruiser(new Location(changingPosition, nonChangingPosition),
+                        new Location(changingPosition + 1, nonChangingPosition),
+                        new Location(changingPosition + 2, nonChangingPosition)));
+                break;
+            }
+        }
+
+        // repeats code before, except with a ship of length 2
+        outerloop:
+        while(true)
+        {
+            int nonChangingPosition = (int) (Math.random() * 10);
+            int changingPosition = (int) (Math.random() * 9);
+
+            if(Math.random() < 0.50)
+            {
+                for (int i = changingPosition; i < changingPosition + 2; i++)
+                {
+                    if(hasShipAtLocation(new Location(nonChangingPosition, i)))
+                        continue outerloop;
+                }
+
+                addShip(new PatrolBoat(new Location(nonChangingPosition, changingPosition),
+                        new Location(nonChangingPosition, changingPosition + 1)));
+                break;
+            }
+            else
+            {
+                for (int i = changingPosition; i < changingPosition + 2; i++)
+                {
+                    if(hasShipAtLocation(new Location(i, nonChangingPosition)))
+                        continue outerloop;
+                }
+
+                addShip(new PatrolBoat(new Location(changingPosition, nonChangingPosition),
+                        new Location(changingPosition + 1, nonChangingPosition)));
+                break;
+            }
+        }
     }
 }
+
+

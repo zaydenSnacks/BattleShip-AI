@@ -65,23 +65,32 @@ public class HumanPlayer extends Player
     @Override
     public void populateShips()
     {
-        Location[] array1 = {new Location(1, 1), new Location(2, 1),
-                new Location(3, 1), new Location(4, 1),
-                new Location(5, 1)};
-        Location[] array2 = {new Location(1, 2), new Location(2, 2),
-                new Location(3, 2), new Location(4, 2)};
-        Location[] array3 = {new Location(1, 3), new Location(2, 3),
-                new Location(4, 3)};
-        Location[] array4 = {new Location(1, 4), new Location(2, 4),
-                new Location(3, 4)};
-        Location[] array5 = {new Location(1, 5),
-                new Location(2, 5)};
+        //These are the locations for each of the ships for Computer Player
+        Location[] aircraft = {new Location(3, 1),
+                new Location(4, 1),
+                new Location(5, 1),
+                new Location(6, 1),
+                new Location(7, 1)};
+        addShip(new AircraftCarrier(aircraft));
 
+        Location[] destroyer = {new Location(4, 4),
+                new Location(4, 5),
+                new Location(4, 6),
+                new Location(4, 7)};
+        addShip(new Destroyer(destroyer));
 
-        addShip(new AircraftCarrier(array1));           // populating the ship array
-        addShip(new Destroyer(array2));
-        addShip(new Cruiser(array3));
-        addShip(new Submarine(array4));
-        addShip(new PatrolBoat(array5));
+        Location[] cruiser = {new Location(6, 3),
+                new Location(7, 3),
+                new Location(8, 3)};
+        addShip(new Cruiser(cruiser));
+
+        Location[] submarine = {new Location(6, 6),
+                new Location(6, 7),
+                new Location(6, 8)};
+        addShip(new Submarine(submarine));
+
+        Location[] patrol = {new Location(0, 7),
+                new Location(1, 7)};
+        addShip(new PatrolBoat(patrol));
     }
 }
